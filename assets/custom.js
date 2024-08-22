@@ -37,8 +37,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function buildPopup(trigger, product){
+
         let section = trigger.closest(selectors.section);
-        let popupContainer = section.querySelector('.pdp-popup-wrapper');
+        let popupContainer = section.querySelector(selectors.popupWrap);
         popupContainer.classList.add('is-active');
 
 
