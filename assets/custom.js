@@ -65,62 +65,68 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         const optionsContainer = document.getElementById('productOptions');
 
-        // Extract unique option values
-        const optionValues = {};
-        product.variants.forEach(variant => {
-            ['option1', 'option2'].forEach((optionKey, index) => {
-                if (variant[optionKey]) {
-                    const optionName = `Option ${index + 1}`;
-                    if (!optionValues[optionName]) {
-                        optionValues[optionName] = new Set();
+          // Extract unique option values
+            const optionValues = {};
+            product.variants.forEach(variant => {
+                Object.keys(variant).forEach(key => {
+                    if (key.startsWith('option')) {
+                        const optionName = `Option ${key.replace('option', '').trim()}`;
+                        if (!optionValues[optionName]) {
+                            optionValues[optionName] = new Set();
+                        }
+                        optionValues[optionName].add(variant[key]);
                     }
-                    optionValues[optionName].add(variant[optionKey]);
-                }
+                });
             });
-        });
-        console.log(optionValues);
-        // Create option fields
-        product.options.forEach(option => {
-            console.log(option);
-            const fieldContainer = document.createElement('div');
-            fieldContainer.classList.add('option-field');
 
-            const label = document.createElement('label');
-            label.textContent = option + ':';
-            fieldContainer.appendChild(label);
-            console.log(fieldContainer);
-            if (option.type === 'select') {
-                const select = document.createElement('select');
-                select.id = option.toLowerCase();
-                select.name = option.toLowerCase();
-                option.values.forEach(value => {
-                    const optionElement = document.createElement('option');
-                    optionElement.value = value;
-                    optionElement.textContent = value;
-                    select.appendChild(optionElement);
-                });
-                fieldContainer.appendChild(select);
-            } else if (option.type === 'radio') {
-                option.values.forEach(value => {
-                    const radioContainer = document.createElement('div');
-                    const radio = document.createElement('input');
-                    radio.type = 'radio';
-                    radio.id = `${option.name.toLowerCase()}_${value}`;
-                    radio.name = option.name.toLowerCase();
-                    radio.value = value;
+            // Create option fields
+            Object.keys(optionValues).forEach(optionName => {
+                const fieldContainer = document.createElement('div');
+                fieldContainer.classList.add('option-field');
 
-                    const radioLabel = document.createElement('label');
-                    radioLabel.setAttribute('for', radio.id);
-                    radioLabel.textContent = value;
+                const label = document.createElement('label');
+                label.textContent = `${optionName}:`;
+                fieldContainer.appendChild(label);
 
-                    radioContainer.appendChild(radio);
-                    radioContainer.appendChild(radioLabel);
-                    fieldContainer.appendChild(radioContainer);
-                });
-            }
+                const values = Array.from(optionValues[optionName]);
 
-            optionsContainer.appendChild(fieldContainer);
-        });
+                if (values.length > 1) {
+                    if (optionName.includes('Option 1')) {
+                        // Use a select dropdown for options like sizes
+                        const select = document.createElement('select');
+                        select.id = optionName.toLowerCase().replace(/\s+/g, '_');
+                        select.name = optionName.toLowerCase().replace(/\s+/g, '_');
+
+                        values.forEach(value => {
+                            const optionElement = document.createElement('option');
+                            optionElement.value = value;
+                            optionElement.textContent = value;
+                            select.appendChild(optionElement);
+                        });
+                        fieldContainer.appendChild(select);
+                    } else {
+                        // Use radio buttons for other options like colors
+                        values.forEach(value => {
+                            const radioContainer = document.createElement('div');
+                            const radio = document.createElement('input');
+                            radio.type = 'radio';
+                            radio.id = `${optionName.toLowerCase().replace(/\s+/g, '_')}_${value}`;
+                            radio.name = optionName.toLowerCase().replace(/\s+/g, '_');
+                            radio.value = value;
+
+                            const radioLabel = document.createElement('label');
+                            radioLabel.setAttribute('for', radio.id);
+                            radioLabel.textContent = value;
+
+                            radioContainer.appendChild(radio);
+                            radioContainer.appendChild(radioLabel);
+                            fieldContainer.appendChild(radioContainer);
+                        });
+                    }
+                }
+
+                optionsContainer.appendChild(fieldContainer);
+            });
 
         // Handle form submission
         // document.getElementById('addToCartForm').addEventListener('submit', function(event) {
