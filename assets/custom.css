@@ -222,6 +222,13 @@ section.the-grid {
     padding-bottom: 50px;
 }
 
+.the-grid .product-image img {
+    width: 100%;
+    display: block;
+    min-height: 300px;
+    object-fit: cover;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
