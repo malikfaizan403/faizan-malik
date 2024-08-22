@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if(triggers){
         triggers.forEach((trigger)=>{
             trigger.addEventListener('click',(el)=>{
-                console.log(el);
                 let product = JSON.parse(trigger.querySelector('script').textContent);
                 buildPopup(trigger, product);
             })
