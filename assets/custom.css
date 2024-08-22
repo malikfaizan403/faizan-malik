@@ -440,6 +440,11 @@ div#productOptions {
     border-right: 1px solid;
     top: 0;
 }
+
+.option-field.color div input:checked + label:before {
+    border-color: #000;
+}
+
 label.black:before{
     background: #000;
     border-color: #000;
