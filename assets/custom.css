@@ -263,7 +263,7 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: .3s all;
+    transition: .3s all ease-in-out;
     z-index: 4;
     background-color: rgba(0,0,0,0.1);
 }
@@ -273,7 +273,7 @@ section h2 {
     background: #fff;
     max-width: 312px;
     padding: 36px 16px 25px;
-    transition: .4s all;
+    transition: .4s all ease-in-out;
     transform: translateY(20px);
     visibility: hidden;
     pointer-events: none;
