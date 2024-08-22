@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         popup.querySelector(selectors.desc).innerHTML = product.description;
         popup.querySelector(selectors.image).src = product.featured_image;
 
-        buildForm();
+        buildForm(product);
     }
 
     function buildForm(product) {
