@@ -182,7 +182,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const isAlreadyInCart = cart.items.some(item => item.variant_id === variantID);
 
                 if (!isAlreadyInCart) {
-                    addToCart(variantID,1).then(()=>{
+                    addToCart(variantID,1)
+                    .then(()=>{
                         alert('Free Gift Added');
                     });
                 } else {
@@ -195,7 +196,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
      // Function to add item to the cart
-     function addToCart(variantId, quantity = 1) {
+     async function addToCart(variantId, quantity = 1) {
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
