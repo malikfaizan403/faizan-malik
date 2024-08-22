@@ -124,6 +124,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             radioContainer.appendChild(radio);
                             radioContainer.appendChild(radioLabel);
                             fieldContainer.appendChild(radioContainer);
+                            fieldContainer.classList.add(optionName.toLowerCase().replace(/\s+/g, '_'));
                         });
                     }
                 }
