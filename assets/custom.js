@@ -14,13 +14,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
             trigger.addEventListener('click',(el)=>{
                 console.log(el);
                 let product = JSON.parse(trigger.querySelector('script').textContent);
-                buildPopup(product);
+                buildPopup(trigger, product);
             })
         })
     }
 
-    function buildPopup(){
-
+    function buildPopup(trigger, product){
+        let section = trigger.closest('.the-grid');
+        let popupContainer = section.querySelector('.pdp-popup');
     }
 
 });
