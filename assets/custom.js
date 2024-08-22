@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
      // Function to add item to the cart
-     async function addToCart(variantId, quantity = 1, successMsg) {
+     function addToCart(variantId, quantity = 1, successMsg) {
         console.log(successMsg);
         fetch('/cart/add.js', {
             method: 'POST',
