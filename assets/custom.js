@@ -8,6 +8,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
     let triggers = document.querySelectorAll('.popup-trigger');
+    let closeBtns = document.querySelectorAll('.closepopup');
+
+    if(closeBtns){
+        closeBtns.forEach(closeBtn => {
+            closeBtn.addEventListener('click',()=>{
+                popupContainer.querySelector('.pdp-popup-wrapper');
+            });
+        });
+    }
+
 
     if(triggers){
         triggers.forEach((trigger)=>{
@@ -22,7 +32,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function buildPopup(trigger, product){
         let section = trigger.closest('.the-grid');
         let popupContainer = section.querySelector('.pdp-popup-wrapper');
-
         popupContainer.classList.add('is-active');
     }
 
