@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let popupContainer = section.querySelector(selectors.popupWrap);
         popupContainer.classList.add('is-active');
 
+        popupContainer.querySelector(selectors.title).innerText = product.title;
 
     }
 
