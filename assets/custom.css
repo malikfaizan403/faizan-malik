@@ -292,4 +292,52 @@ body:not(.is-loaded)>* {
         padding: 15px 20px 15px 30px;
     }
 
+    .bottom_note p {
+        font-size: 14px;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+
+    .bottom_note {
+        overflow: hidden;
+    }
+
+    .bottom_note {
+        overflow: hidden;
+        position: relative;
+        height: 40px;
+    }
+
+    .bottom_note p {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        text-align: center;
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -moz-animation: scroll-left 2s linear infinite;
+        -webkit-animation: scroll-left 2s linear infinite;
+        animation: scroll-left 10s linear infinite;
+    }
+
+    @-moz-keyframes scroll-left {
+        0% {
+            -moz-transform: translateX(100%);
+        }
+        100% {
+            -moz-transform: translateX(-100%);
+        }
+    }
+
+    @-webkit-keyframes scroll-left {
+        0% {
+            -webkit-transform: translateX(100%);
+        }
+        100% {
+            -webkit-transform: translateX(-100%);
+        }
+    }
+
 }
