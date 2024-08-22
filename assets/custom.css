@@ -8,3 +8,6 @@ body{
 .is-align-middle{
     align-items: center;
 }
+.is-justify-spece-between{
+    justify-content: space-between;
+}
