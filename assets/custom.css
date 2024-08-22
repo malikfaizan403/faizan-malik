@@ -217,6 +217,11 @@ body:not(.is-loaded)>* {
     padding: 0;
 }
 
+section.the-grid {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
