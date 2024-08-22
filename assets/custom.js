@@ -65,6 +65,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         const optionsContainer = document.getElementById('productOptions');
 
+        // Extract unique option values
+        const optionValues = {};
+        product.variants.forEach(variant => {
+            ['option1', 'option2'].forEach((optionKey, index) => {
+                if (variant[optionKey]) {
+                    const optionName = `Option ${index + 1}`;
+                    if (!optionValues[optionName]) {
+                        optionValues[optionName] = new Set();
+                    }
+                    optionValues[optionName].add(variant[optionKey]);
+                }
+            });
+        });
         // Create option fields
         product.options.forEach(option => {
             console.log(option);
