@@ -66,6 +66,7 @@ span.btn-icon {
     text-decoration: none;
     position: relative;
     display: inline-block;
+    color: #000;
 }
 .btn > span{
     position: relative;
