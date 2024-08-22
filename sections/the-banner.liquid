@@ -30,22 +30,29 @@
                 <img src="{{ section.settings.banner_image | img_url:'master' }}" alt="Banner Image" />
             {% endif %}
         </div>
-        <div class="the-banner-text">
-            {% if section.settings.banner_title != blank %}
-                <h2>{{ section.settings.banner_title }}</h2>
-            {% endif %}
-            {% if section.settings.banner_content != blank %}
-                <div class="banner_content">
-                    {{ section.settings.banner_content }}
-                </div>
-            {% endif %}
-            {% if section.settings.button != blank %}
-                <div class="banner-cta">
-                    <a href="{{ section.settings.button_url }}" class="btn btn--{{ section.settings.button_style }}"><span class="btn-label">{{ section.settings.button }}</span> <span class="btn-icon"><svg width="69" height="30" viewBox="0 0 69 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.75879 13.1458L0.758789 13.1458L0.758789 17.1458L2.75879 17.1458L2.75879 13.1458ZM68.173 16.56C68.9541 15.779 68.9541 14.5127 68.173 13.7316L55.4451 1.00368C54.664 0.222633 53.3977 0.222633 52.6167 1.00368C51.8356 1.78473 51.8356 3.05106 52.6167 3.83211L63.9304 15.1458L52.6167 26.4595C51.8356 27.2406 51.8356 28.5069 52.6167 29.288C53.3977 30.069 54.664 30.069 55.4451 29.288L68.173 16.56ZM2.75879 17.1458L66.7588 17.1458L66.7588 13.1458L2.75879 13.1458L2.75879 17.1458Z" fill="black"/> </svg></span></a>
-                </div>
-            {% endif %}
-        </div>
+        {% if section.settings.banner_title != blank or section.settings.banner_content != blank or section.settings.banner_button != blank %}
+            <div class="the-banner-text">
+                {% if section.settings.banner_title != blank %}
+                    <h2>{{ section.settings.banner_title }}</h2>
+                {% endif %}
+                {% if section.settings.banner_content != blank %}
+                    <div class="banner_content">
+                        {{ section.settings.banner_content }}
+                    </div>
+                {% endif %}
+                {% if section.settings.banner_button != blank %}
+                    <div class="banner-cta">
+                        <a href="{{ section.settings.banner_button_url }}" class="btn btn--{{ section.settings.banner_button_style }}"><span class="btn-label">{{ section.settings.banner_button }}</span> <span class="btn-icon"><svg width="69" height="30" viewBox="0 0 69 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.75879 13.1458L0.758789 13.1458L0.758789 17.1458L2.75879 17.1458L2.75879 13.1458ZM68.173 16.56C68.9541 15.779 68.9541 14.5127 68.173 13.7316L55.4451 1.00368C54.664 0.222633 53.3977 0.222633 52.6167 1.00368C51.8356 1.78473 51.8356 3.05106 52.6167 3.83211L63.9304 15.1458L52.6167 26.4595C51.8356 27.2406 51.8356 28.5069 52.6167 29.288C53.3977 30.069 54.664 30.069 55.4451 29.288L68.173 16.56ZM2.75879 17.1458L66.7588 17.1458L66.7588 13.1458L2.75879 13.1458L2.75879 17.1458Z" fill="black"/> </svg></span></a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
     </div>
+    {% if section.settings.bottom_note != blank %}
+        <div class="bottom_note">
+            <p>{{ section.settings.bottom_note }}</p>
+        </div>
+    {% endif %}
 </section>
 
 
@@ -107,6 +114,61 @@
                 "type": "image_picker",
                 "id": "banner_image",
                 "label": "Banner Image"
+            },
+            {
+                "type": "header",
+                "content": "Banner Content"
+            },
+            {
+                "type": "text",
+                "id": "banner_title",
+                "label": "Banner Title",
+                "default": "Banner Heading"
+            },
+            {
+                "type": "url",
+                "id": "banner_content",
+                "label": "Button URL"
+            },
+            {
+                "type": "header",
+                "content": "Banner Button"
+            },
+            {
+                "type": "text",
+                "id": "banner_button",
+                "label": "Button label",
+                "default": "Click Here"
+            },
+            {
+                "type": "url",
+                "id": "banner_button_url",
+                "label": "Button URL"
+            },
+            {
+                "type": "select",
+                "id": "banner_button_style",
+                "label": "Button Style",
+                "options": [
+                    {
+                        "label": "Primary Button",
+                        "value": "primary"
+                    },
+                    {
+                        "label": "Secondary Button",
+                        "value": "secondary"
+                    }
+                ],
+                "default": "primary"
+            },
+            {
+                "type": "header",
+                "content": "Addional Settings"
+            },
+            {
+                "type": "text",
+                "id": "bottom_note",
+                "label": "Bottom Note"
             }
         ],
         "presets": [
