@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     // Find the variant ID based on selected options
                     const selectedVariant = product.variants.find(variant =>
                         variant.options.every((value, index) =>
-                            value === selectedOptions[`Option ${index + 1}`]
+                            value === selectedOptions[product.options[index]]
                         )
                     );
                     console.log(selectedVariant);
