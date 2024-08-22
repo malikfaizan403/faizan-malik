@@ -210,6 +210,7 @@ body:not(.is-loaded)>* {
     background: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 @media (max-width:490px){
