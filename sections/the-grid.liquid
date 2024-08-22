@@ -3,6 +3,16 @@
         {% if section.settings.tite != blank %}
             <h2>{{ section.settings.tite }}</h2>
         {% endif %}
+        <div class="grid product-grid grid--2-col-tablet-down grid--3-col-desktop">
+            {% for block in section.blocks %}
+                {% assign card_product = block.settings.product %}
+                <div class="grid__item">
+                    <div class="product-image">
+                        <img src="{{ card_product.featured_image | img_url: '300x' }}" alt="{{ card_product.title }}">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 {% schema %}
