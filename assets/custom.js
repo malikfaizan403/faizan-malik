@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                         // Prepare and send the request to add to cart
                         addToCart(selectedVariant.id)
-                        .then(checkforGift(freeGift))
+                        .then(checkforGift(data))
                         .then(alert('Item added to cart.'));
                     } else {
                         alert('Please select a valid option.');
@@ -197,28 +197,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
      // Function to add item to the cart
      async function addToCart(variantId, quantity = 1) {
-        fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                id: variantId,
-                quantity: quantity
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
+        try {
+            const response = await fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    id: variantId,
+                    quantity: quantity
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+
+            const data = await response.json();
             return data;
             // Handle success (e.g., show a message, update cart UI)
-        })
-        .catch(error => {
+        } catch (error) {
             alert('Something Went Wrong!');
             // Handle error
-        });
+            throw error; // Re-throw the error if you want it to be handled further up the call chain
+        }
     }
-
     // reset popup on close
     function resetPopup(popup){
 
