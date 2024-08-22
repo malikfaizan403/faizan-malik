@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const select = document.createElement('select');
                 select.id = option.toLowerCase();
                 select.name = option.toLowerCase();
-
                 option.values.forEach(value => {
                     const optionElement = document.createElement('option');
                     optionElement.value = value;
