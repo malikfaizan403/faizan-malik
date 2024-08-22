@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if(closeBtns){
         closeBtns.forEach(closeBtn => {
             closeBtn.addEventListener('click',()=>{
-                popupContainer.querySelector('.pdp-popup-wrapper');
+                closeBtn.closest('.pdp-popup-wrapper').classList().remove('is-active');
             });
         });
     }
