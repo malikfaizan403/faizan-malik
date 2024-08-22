@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             const optionValues = {};
             product.variants.forEach(variant => {
                 variant.options.forEach((value, index) => {
-                    console.log(value);
+                    console.log(value,index);
                     const optionName = `Option ${index + 1}`;
                     if (!optionValues[optionName]) {
                         optionValues[optionName] = new Set();
