@@ -177,11 +177,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     })
                     .then(response => response.json())
                     .then(data => {
-                        console.log('Item added to cart:', data);
+                       alert('Item added to cart.');
                         // Handle success (e.g., show a message, update cart UI)
                     })
                     .catch(error => {
-                        console.error('Error adding item to cart:', error);
+                        alert('Something Went Wrong!');
                         // Handle error
                     });
                 }
