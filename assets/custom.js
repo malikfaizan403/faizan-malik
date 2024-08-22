@@ -157,7 +157,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         document.getElementById('variantId').value = selectedVariant.id;
 
                         // Prepare and send the request to add to cart
-                        addToCart(selectedVariant.id,'Item added to cart.');
+                        addToCart(selectedVariant.id)
+                        .then(alert('Item added to cart.'));
                     } else {
                         alert('Please select a valid option.');
                     }
@@ -182,7 +183,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const isAlreadyInCart = cart.items.some(item => item.variant_id === variantID);
 
                 if (!isAlreadyInCart) {
-                    addToCart(variantID,1,'Free Gift Added');
+                    addToCart(variantID,1)
+                    .then(alert('Free Gift Added to cart.'));;
                 } else {
                     console.log('Free gift is already in the cart.');
                 }
