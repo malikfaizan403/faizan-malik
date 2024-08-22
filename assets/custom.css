@@ -44,7 +44,8 @@ span.btn-icon {
     background-color: #fff544;
 }
 
-.btn.btn--primary:hover:before {
+.btn.btn--primary:hover:before,
+.btn.btn.btn--secondary:before {
     width: 100%;
 }
 .btn.btn--primary > span.btn-label{
