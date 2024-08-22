@@ -115,6 +115,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                             const radioLabel = document.createElement('label');
                             radioLabel.setAttribute('for', radio.id);
+                            if(optionName.toLowerCase() == 'color'){
+                                radioLabel.classList.add(value.toLowerCase().replace(/\s+/g, '_'));
+                            }
                             radioLabel.textContent = value;
 
                             radioContainer.appendChild(radio);
