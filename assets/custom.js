@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             value === selectedOptions[`Option ${index + 1}`]
                         )
                     );
-
+                    console.log(selectedVariant);
                     if (selectedVariant) {
                         document.getElementById('variantId').value = selectedVariant.id;
 
