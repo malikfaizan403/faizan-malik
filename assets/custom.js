@@ -182,10 +182,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const isAlreadyInCart = cart.items.some(item => item.variant_id === variantID);
 
                 if (!isAlreadyInCart) {
-                    addToCart(variantID,1)
-                    .then(()=>{
-                        alert('Free Gift Added');
-                    });
+                    addToCart(variantID,1,'Free Gift Added');
                 } else {
                     console.log('Free gift is already in the cart.');
                 }
