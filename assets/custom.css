@@ -28,7 +28,8 @@ span.btn-icon {
     margin-left: 10px;
 }
 
-.btn.btn--primary:before {
+.btn.btn--primary:before,
+.btn.btn-secondary:before {
     content: "";
     position: absolute;
     top: 0;
