@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     } else {
                         // Use radio buttons for other options like colors
                         values.forEach((value, index) => {
-                            console.log(index);
+
                             const radioContainer = document.createElement('div');
                             const radio = document.createElement('input');
                             radio.type = 'radio';
@@ -118,7 +118,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
                                 radioLabel.classList.add(value.toLowerCase().replace(/\s+/g, '_'));
                             }
                             radioLabel.textContent = value;
-
+                            if(index == 0){
+                                radio.setAttribute('checked', true);
+                            }
                             radioContainer.appendChild(radio);
                             radioContainer.appendChild(radioLabel);
                             fieldContainer.appendChild(radioContainer);
