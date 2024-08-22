@@ -192,6 +192,6 @@ section.the-banner .page-width {
     max-width: 100%;
 }
 
-body:not(.is-loaded) > *{
-    filter: blur(.5px);
+body:not(.is-loaded)>* {
+    filter: blur(1px);
 }
