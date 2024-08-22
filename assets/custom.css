@@ -427,6 +427,24 @@ div#productOptions {
     -webkit-appearance: none;
 }
 
+.option-field.color div label {
+    position: relative;
+}
+
+.option-field.color div label:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid;
+    top: 0;
+}
+label.black:before{
+    background: #000;
+}
+
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
