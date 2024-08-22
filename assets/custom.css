@@ -60,6 +60,7 @@ span.btn-icon {
     line-height: 20px;
     text-decoration: none;
     position: relative;
+    display: inline-block;
 }
 .btn > span{
     position: relative;
