@@ -78,9 +78,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 });
             });
 
-
-            console.log(optionValues);
-
             // Create option fields
             Object.keys(optionValues).forEach(optionName => {
                 const fieldContainer = document.createElement('div');
