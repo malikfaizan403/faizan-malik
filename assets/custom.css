@@ -282,7 +282,6 @@ section h2 {
     transform: none;
     visibility: visible;
     pointer-events: all;
-    display: none;
 }
 
 .is-align-end {
