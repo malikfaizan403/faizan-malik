@@ -44,7 +44,7 @@ span.btn-icon {
 }
 .btn.btn--primary:hover > span.btn-label{
     transition-delay: .2s;
-    transition: .2s all ease-in-out;
+    transition: .4s all ease-in-out;
 }
 .btn.btn--primary:hover > span.btn-label{
     color: #fff;
