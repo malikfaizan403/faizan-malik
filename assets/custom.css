@@ -442,11 +442,16 @@ div#productOptions {
 }
 label.black:before{
     background: #000;
+    border-color: #000;
 }
 label.red:before{
     background: red;
+    border-color: red;
 }
-
+label.blue:before{
+    background: blue;
+    border-color: blue;
+}
 
 @media (max-width:490px){
 
