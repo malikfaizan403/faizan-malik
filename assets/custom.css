@@ -339,7 +339,7 @@ span.closepopup svg {
     margin-bottom: 12px;
 }
 
-.pdp-popup-wrapper:not(.is-ative) {
+.pdp-popup-wrapper:not(.is-active) {
     visibility: hidden;
     pointer-events: none;
 }
