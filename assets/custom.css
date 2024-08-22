@@ -187,3 +187,7 @@ span.btn-icon {
     background: #F5F5F5;
     padding: 10px;
 }
+
+section.the-banner .page-width {
+    max-width: 100%;
+}
