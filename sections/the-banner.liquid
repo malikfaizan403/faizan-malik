@@ -24,7 +24,9 @@
     </div>
     <div class="the-benner-content">
         {% if section.settings.banner_image == blank %}
-            <img src="https://cdn.shopify.com/s/files/1/0661/1913/9380/files/banner.jpg?v=1724344864" alt="Banner Image" >
+            <img src="https://cdn.shopify.com/s/files/1/0661/1913/9380/files/banner.jpg?v=1724344864" alt="Banner Image" />
+        {% else %}
+            <img src="{{ section.settings.banner_image | img_url:'master' }}" alt="Banner Image" />
         {% endif %}
     </div>
 </section>
