@@ -3,6 +3,7 @@ Shopify.formatMoney = function(cents, format) { if (typeof cents == 'string') { 
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
+    const freeGift = 44747783471156;
 
     setTimeout(() => {
         document.body.classList.add('is-loaded')
@@ -177,8 +178,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     })
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data.variant_options);
-                       alert('Item added to cart.');
+                        checkforGift(data);
+                        alert('Item added to cart.');
                         // Handle success (e.g., show a message, update cart UI)
                     })
                     .catch(error => {
@@ -186,6 +187,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         // Handle error
                     });
                 }
+
+    }
+
+    function checkforGift(data) {
+        if(data.variant_options.includes('Black') && data.variant_options.includes('Medium')){
+            addFreeGiftifNotAddedYet(freeGift);
+        }
+    }
+
+    function addFreeGiftifNotAddedYet(variantID){
 
     }
 
