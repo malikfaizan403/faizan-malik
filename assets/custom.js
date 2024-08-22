@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         // Handle form submission
         document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+
             event.preventDefault();
 
             const selectedOptions = {};
@@ -145,6 +146,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     selectedOptions[option.name.toLowerCase()] = selectedRadio ? selectedRadio.value : null;
                 }
             });
+
+            console.log(selectedOptions);
 
             // Find the variant ID based on selected options
             const selectedVariant = product.variants.find(variant =>
