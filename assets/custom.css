@@ -254,6 +254,77 @@ section h2 {
     display: block;
 }
 
+.pdp-popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px) saturate(0.5);
+    transition: .4s all;
+}
+
+.pdp-popup {
+    position: relative;
+    background: #fff;
+    max-width: 312px;
+    padding: 36px 16px 25px;
+}
+
+.is-align-end {
+    align-items: flex-end;
+}
+
+.pdp-popup-image {
+    width: 120px;
+}
+
+.pdp-popup-image img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.pdp-product-detail {
+    width: calc(100% - 120px);
+    padding-left: 10px;
+}
+
+span.closepopup {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+span.closepopup svg {
+    display: block;
+}
+
+.pdp-product-detail h4 {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 38px;
+    text-align: left;
+    margin: 0 0 10px;
+}
+
+.pdp-desc p {
+    margin: 0;
+    font-family: Jost;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 15.4px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
