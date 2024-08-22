@@ -35,3 +35,25 @@ span.btn-icon {
 .btn.btn--primary {
     background: #FFF544;
 }
+
+.top-bar {
+    background: #F5F5F5;
+}
+
+.note p {
+    margin: 0;
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13.42px;
+    text-align: center;
+}
+
+.shop-logo img {
+    display: block;
+    object-fit: contain;
+}
+
+.top-bar-inner {
+    padding: 10px 0;
+}
