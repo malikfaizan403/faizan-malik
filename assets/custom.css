@@ -61,8 +61,7 @@ span.btn-icon {
 
 .btn span.btn-icon svg path,
 .btn > span.btn-label,
-.btn.btn--primary:before,
-.btn.btn--secondary:before {
+.btn:before {
     transition: .4s all ease-in-out;
 }
 
