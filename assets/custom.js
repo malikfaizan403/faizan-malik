@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         section: '.the-grid',
         title: '.pdp-product-detail > h4',
         price: '.pdp-price',
-        desc: '.pdp-desc'
+        desc: '.pdp-desc',
+        image: '.pdp-popup-image img'
     }
 
     let triggers = document.querySelectorAll(selectors.triggers);
@@ -55,6 +56,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         popup.querySelector(selectors.title).innerText = product.title;
         popup.querySelector(selectors.price).innerText = Shopify.formatMoney(product.price);
         popup.querySelector(selectors.desc).innerHTML = product.description;
+        popup.querySelector(selectors.image).src = product.featured_image;
+
     }
 
 });
