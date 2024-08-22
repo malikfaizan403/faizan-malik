@@ -175,6 +175,7 @@ span.btn-icon {
     text-align: left;
     margin-top: 0;
 }
+
 .banner_content p:not(:last-child){
     margin-bottom: 0;
 }
