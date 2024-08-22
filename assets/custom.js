@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         // Create option fields
         product.options.forEach(option => {
+            console.log(option);
             const fieldContainer = document.createElement('div');
             fieldContainer.classList.add('option-field');
 
