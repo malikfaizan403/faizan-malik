@@ -443,6 +443,9 @@ div#productOptions {
 label.black:before{
     background: #000;
 }
+label.red:before{
+    background: red;
+}
 
 
 @media (max-width:490px){
