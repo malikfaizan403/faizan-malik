@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         closers: '.closepopup',
         popupWrap: '.pdp-popup-wrapper',
         section: '.the-grid',
-        title: '.pdp-product-detail > h4'
+        title: '.pdp-product-detail > h4',
+        price: '.pdp-price',
+        desc: '.pdp-desc'
     }
 
     let triggers = document.querySelectorAll(selectors.triggers);
