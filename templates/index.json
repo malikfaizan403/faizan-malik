@@ -17,10 +17,10 @@
         "button": "Choose Gift",
         "button_url": "",
         "button_style": "primary",
-        "banner_title": "Banner Heading",
+        "banner_title": "The Gift Guide",
         "banner_content": "",
-        "banner_button": "",
-        "banner_button_url": "",
+        "banner_button": "choose gift",
+        "banner_button_url": "#",
         "banner_button_style": "primary",
         "bottom_note": ""
       }
