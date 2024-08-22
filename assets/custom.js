@@ -49,9 +49,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function addProductData(popup, product) {
+        console.log(product);
         popup.querySelector(selectors.title).innerText = product.title;
         popup.querySelector(selectors.price).innerText = product.price;
-        popup.querySelector(selectors.desc).innerText = product.description;
+        popup.querySelector(selectors.desc).innerHtml = product.description;
     }
 
 });
