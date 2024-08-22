@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     function addProductData(popup, product) {
         console.log(product);
         popup.querySelector(selectors.title).innerText = product.title;
-        popup.querySelector(selectors.price).innerText = Shopify.money_format(product.price);
+        popup.querySelector(selectors.price).innerText = Shopify.formatMoney(product.price);
         popup.querySelector(selectors.desc).innerHTML = product.description;
     }
 
