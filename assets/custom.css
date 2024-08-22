@@ -58,8 +58,8 @@ span.btn-icon {
     fill: #fff;
 }
 
-.btn.btn--secondary:hover span.btn-icon svg path{
-    fill: #000;
+.btn.btn--secondary span.btn-icon svg path{
+    fill: #fff;
 }
 
 .btn {
