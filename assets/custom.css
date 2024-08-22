@@ -45,7 +45,7 @@ span.btn-icon {
 }
 
 .btn.btn--primary:hover:before,
-.btn.btn.btn--secondary:before {
+.btn.btn.btn--secondary:hover:before {
     width: 100%;
 }
 .btn.btn--primary > span.btn-label{
