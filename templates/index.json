@@ -16,7 +16,13 @@
         "text": "Find the ideal gift for your loved ones.",
         "button": "Choose Gift",
         "button_url": "",
-        "button_style": "primary"
+        "button_style": "primary",
+        "banner_title": "Banner Heading",
+        "banner_content": "",
+        "banner_button": "",
+        "banner_button_url": "",
+        "banner_button_style": "primary",
+        "bottom_note": ""
       }
     }
   },
