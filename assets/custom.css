@@ -340,4 +340,8 @@ body:not(.is-loaded)>* {
         }
     }
 
+    .the-banner-content {
+        height: calc(72vh -  64px);
+    }
+
 }
