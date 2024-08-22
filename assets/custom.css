@@ -209,12 +209,14 @@ body:not(.is-loaded)>* {
     transform: translateY(-50%);
     left: 16px;
 }
+
 .menu_btn button{
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
 }
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
@@ -233,6 +235,59 @@ body:not(.is-loaded)>* {
 
     .menu_btn{
         display: block;
+    }
+
+    .the-banner-text {
+        position: static;
+        padding: 50px 16px 16px;
+    }
+
+    .the-banner-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .the-banner-text h2 {
+        font-family: Jost;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    .banner_content p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .banner_content p:not(:last-child){
+        margin-bottom: 0;
+    }
+
+
+    .banner_content {
+        margin: 0;
+    }
+
+    .banner-cta {
+        max-width: max-content;
+        position: absolute;
+        margin: auto;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+    }
+
+    .btn.btn--secondary {
+        padding: 15px 20px 15px 30px;
     }
 
 }
