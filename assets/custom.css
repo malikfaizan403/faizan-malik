@@ -65,14 +65,13 @@ span.btn-icon {
     transition: .4s all ease-in-out;
 }
 
-.btn.btn--primary:hover span.btn-icon svg path{
-    fill: #fff;
-}
-
 .btn.btn--secondary span.btn-icon svg path{
     fill: #fff;
 }
 
+.btn.btn--primary:hover span.btn-icon svg path{
+    fill: #fff;
+}
 
 .btn.btn--secondary:hover span.btn-icon svg path{
     fill: #000;
