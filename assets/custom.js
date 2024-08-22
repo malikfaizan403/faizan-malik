@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let selectors = {
         triggers: '.popup-trigger',
         closers: '.closepopup',
-        popupWrap: '.pdp-popup-wrapper'
+        popupWrap: '.pdp-popup-wrapper',
+        section: '.the-grid'
     }
 
     let triggers = document.querySelectorAll(selectors.triggers);
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function buildPopup(trigger, product){
-        let section = trigger.closest('.the-grid');
+        let section = trigger.closest(selectors.section);
         let popupContainer = section.querySelector('.pdp-popup-wrapper');
         popupContainer.classList.add('is-active');
 
