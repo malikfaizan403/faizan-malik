@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if(triggers){
         triggers.forEach((trigger)=>{
             trigger.addEventListener('click',(el)=>{
-                let product = JSON.parse(el.querySelector('script').textContent);
+                let product = JSON.parse(trigger.querySelector('script').textContent);
                 console.log(product);
             })
         })
