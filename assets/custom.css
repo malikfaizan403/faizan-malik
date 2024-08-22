@@ -43,6 +43,11 @@ span.btn-icon {
     width: 100%;
 }
 
+.btn.btn--primary:hover:before > span{
+    color: #fff;
+    transition: .4s all ease-in-out;
+}
+
 .btn {
     font-size: 16px;
     padding: 12px 20px 12px 40px;
