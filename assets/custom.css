@@ -276,6 +276,12 @@ section h2 {
     padding: 36px 16px 25px;
 }
 
+.pdp-popup-wrapper:not(.is-active) .pdp-popup {
+    transform: translateY(20px);
+    visibility: hidden;
+    pointer-events: none;
+}
+
 .is-align-end {
     align-items: flex-end;
 }
