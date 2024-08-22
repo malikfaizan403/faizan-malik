@@ -48,7 +48,7 @@ span.btn-icon {
 .btn.btn.btn--secondary:hover:before {
     width: 100%;
 }
-.btn.btn--primary > span.btn-label{
+.btn > span.btn-label{
     transition-delay: .2s;
 }
 .btn.btn--primary:hover > span.btn-label{
