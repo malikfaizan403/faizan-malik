@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function addProductData(popup, product) {
-        console.log(product);
         popup.querySelector(selectors.title).innerText = product.title;
         popup.querySelector(selectors.price).innerText = Shopify.formatMoney(product.price);
         popup.querySelector(selectors.desc).innerHTML = product.description;
@@ -69,7 +68,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
             const optionValues = {};
             product.variants.forEach(variant => {
                 variant.options.forEach((value, index) => {
-                    console.log(value,index);
                     const optionName = product.options[index];
                     if (!optionValues[optionName]) {
                         optionValues[optionName] = new Set();
@@ -77,7 +75,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     optionValues[optionName].add(value);
                 });
             });
-            console.log(optionValues);
             // Create option fields
             Object.keys(optionValues).forEach(optionName => {
                 const fieldContainer = document.createElement('div');
@@ -106,7 +103,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         fieldContainer.classList.add(optionName.toLowerCase().replace(/\s+/g, '_'));
                     } else {
                         // Use radio buttons for other options like colors
-                        values.forEach(value => {
+                        values.forEach((value, index) => {
+                            console.log(index);
                             const radioContainer = document.createElement('div');
                             const radio = document.createElement('input');
                             radio.type = 'radio';
