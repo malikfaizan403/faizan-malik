@@ -11,8 +11,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if(triggers){
         triggers.forEach((trigger)=>{
-            trigger.addEventListener('click',buildPopup())
+            trigger.addEventListener('click',()=>{
+                let product = JSON.parse(this.find('script').content);
+            })
         })
+    }
+
+    function buildPopup(){
+
     }
 
 });
