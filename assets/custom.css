@@ -43,7 +43,7 @@ span.btn-icon {
     width: 100%;
 }
 
-.btn.btn--primary:hover:before > span{
+.btn.btn--primary:hover > span{
     color: #fff;
     transition: .4s all ease-in-out;
 }
