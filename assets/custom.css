@@ -13,6 +13,10 @@ body{
     justify-content: space-between;
 }
 
+iframe#preview-bar-iframe {
+    display: none !important;
+}
+
 span.btn-icon svg {
     display: block;
     height: 100%;
