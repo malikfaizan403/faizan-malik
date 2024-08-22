@@ -57,6 +57,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         popup.querySelector(selectors.price).innerText = Shopify.formatMoney(product.price);
         popup.querySelector(selectors.desc).innerHTML = product.description;
         popup.querySelector(selectors.image).src = product.featured_image;
+    }
+
+    // reset popup on close
+    function resetPopup(popup){
 
     }
 
