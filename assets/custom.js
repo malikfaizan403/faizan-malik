@@ -158,6 +158,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
                         // Prepare and send the request to add to cart
                         addToCart(selectedVariant.id)
+                        .then(checkforGift(data))
                         .then(alert('Item added to cart.'));
                     } else {
                         alert('Please select a valid option.');
@@ -209,6 +210,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
         .then(response => response.json())
         .then(data => {
+            return data;
             // Handle success (e.g., show a message, update cart UI)
         })
         .catch(error => {
