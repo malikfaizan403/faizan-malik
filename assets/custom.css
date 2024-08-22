@@ -265,6 +265,7 @@ section h2 {
     justify-content: center;
     backdrop-filter: blur(1px) saturate(0.5);
     transition: .4s all;
+    z-index: 4;
 }
 
 .pdp-popup {
