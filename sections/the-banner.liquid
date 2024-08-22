@@ -22,7 +22,11 @@
             </div>
         </div>
     </div>
-    <div class="the-benner-content"></div>
+    <div class="the-benner-content">
+        {% if section.settings.banner_image == blank %}
+            <img src="" >
+        {% endif %}
+    </div>
 </section>
 
 
@@ -75,6 +79,15 @@
                     }
                 ],
                 "default": "primary"
+            },
+            {
+                "type": "header",
+                "content": "Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image",
+                "label": "Banner Image"
             }
         ],
         "presets": [
