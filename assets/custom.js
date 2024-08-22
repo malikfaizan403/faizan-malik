@@ -6,14 +6,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.body.classList.add('is-loaded')
     }, 500);
 
+    // popup
 
-    let triggers = document.querySelectorAll('.popup-trigger');
-    let closeBtns = document.querySelectorAll('.closepopup');
+    let selectors = {
+        triggers: '.popup-trigger',
+        closers: '.closepopup',
+        popupWrap: '.pdp-popup-wrapper'
+    }
+
+    let triggers = document.querySelectorAll(selectors.triggers);
+    let closeBtns = document.querySelectorAll(selectors.closers);
 
     if(closeBtns){
         closeBtns.forEach(closeBtn => {
             closeBtn.addEventListener('click',()=>{
-                closeBtn.closest('.pdp-popup-wrapper').classList.remove('is-active');
+                closeBtn.closest(selectors.popupWrap).classList.remove('is-active');
             });
         });
     }
@@ -32,6 +39,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let section = trigger.closest('.the-grid');
         let popupContainer = section.querySelector('.pdp-popup-wrapper');
         popupContainer.classList.add('is-active');
+
+
     }
 
 });
