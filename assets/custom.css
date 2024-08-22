@@ -264,7 +264,7 @@ section h2 {
     align-items: center;
     justify-content: center;
     backdrop-filter: saturate(0.5);
-    transition: .4s all;
+    transition: .3s all;
     z-index: 4;
 }
 
