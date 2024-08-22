@@ -12,8 +12,9 @@
     "the_banner_3KgdFG": {
       "type": "the-banner",
       "settings": {
-        "text": "Some text here",
-        "button": "Click Here",
+        "logo": "shopify:\/\/shop_images\/Group_1000007777_b0a05c99-e726-43a7-bfc9-5b7be2828618.png",
+        "text": "Find the ideal gift for your loved ones.",
+        "button": "Choose Gift",
         "button_url": "",
         "button_style": "primary"
       }
