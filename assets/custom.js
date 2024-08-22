@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 }
             });
         });
+        console.log(optionValues);
         // Create option fields
         product.options.forEach(option => {
             console.log(option);
