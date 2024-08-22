@@ -236,6 +236,7 @@ section h2 {
     line-height: 43.2px;
     text-align: left;
     margin-top: 0;
+    margin-bottom: 30px;
 }
 
 @media (max-width:490px){
