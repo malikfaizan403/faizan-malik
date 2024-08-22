@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         triggers: '.popup-trigger',
         closers: '.closepopup',
         popupWrap: '.pdp-popup-wrapper',
-        section: '.the-grid'
+        section: '.the-grid',
+        title: '.pdp-product-detail > h4'
     }
 
     let triggers = document.querySelectorAll(selectors.triggers);
