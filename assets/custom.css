@@ -239,6 +239,10 @@ section h2 {
     margin-bottom: 30px;
 }
 
+.is-relative{
+    position: relative;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
