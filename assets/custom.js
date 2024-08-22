@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if(triggers){
         triggers.forEach((trigger)=>{
-            trigger.addEventListener('click',()=>{
-                let product = JSON.parse(this.querySelector('script').textContent);
+            trigger.addEventListener('click',(el)=>{
+                let product = JSON.parse(el.querySelector('script').textContent);
                 console.log(product);
             })
         })
