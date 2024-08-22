@@ -25,9 +25,61 @@
         "banner_button_style": "secondary",
         "bottom_note": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
+    },
+    "the_grid_8rhicC": {
+      "type": "the-grid",
+      "blocks": {
+        "product_card_Ktr7gc": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "black-leather-bag"
+          }
+        },
+        "product_card_ARxFbq": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "blue-silk-tuxedo"
+          }
+        },
+        "product_card_VtLNWB": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "chequered-red-shirt"
+          }
+        },
+        "product_card_Ccert4": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "classic-varsity-top"
+          }
+        },
+        "product_card_VK7qaQ": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "dark-denim-top"
+          }
+        },
+        "product_card_ea3QNk": {
+          "type": "product_card",
+          "settings": {
+            "card_product": "led-high-tops"
+          }
+        }
+      },
+      "block_order": [
+        "product_card_Ktr7gc",
+        "product_card_ARxFbq",
+        "product_card_VtLNWB",
+        "product_card_Ccert4",
+        "product_card_VK7qaQ",
+        "product_card_ea3QNk"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
-    "the_banner_3KgdFG"
+    "the_banner_3KgdFG",
+    "the_grid_8rhicC"
   ]
 }
