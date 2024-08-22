@@ -63,21 +63,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function buildForm(product) {
 
-        const optionsContainer = document.getElementById('productOptions');
+            const optionsContainer = document.getElementById('productOptions');
 
-          // Extract unique option values
             const optionValues = {};
             product.variants.forEach(variant => {
-                Object.keys(variant).forEach(key => {
-                    if (key.startsWith('option')) {
-                        const optionName = `Option ${key.replace('option', '').trim()}`;
-                        if (!optionValues[optionName]) {
-                            optionValues[optionName] = new Set();
-                        }
-                        optionValues[optionName].add(variant[key]);
+                variant.options.forEach((value, index) => {
+                    const optionName = `Option ${index + 1}`;
+                    if (!optionValues[optionName]) {
+                        optionValues[optionName] = new Set();
                     }
+                    optionValues[optionName].add(value);
                 });
             });
+
 
             console.log(optionValues);
 
