@@ -274,7 +274,7 @@ section h2 {
     max-width: 312px;
     padding: 36px 16px 25px;
     transition: .3s all ease-in-out;
-    transform: translateY(20px);
+    transform: translateY(40px);
     visibility: hidden;
     pointer-events: none;
 }
