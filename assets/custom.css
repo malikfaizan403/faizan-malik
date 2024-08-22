@@ -200,7 +200,8 @@ body:not(.is-loaded)>* {
     filter: blur(1px);
 }
 
-.top-bar-inner .note, .top-bar-inner .header-cta {
+.top-bar-inner .note,
+.top-bar-inner .header-cta {
     display: none;
 }
 
@@ -211,4 +212,12 @@ body:not(.is-loaded)>* {
 
 .shop-logo img {
     height: 20px;
+}
+
+.menu_btn{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
 }
