@@ -18,11 +18,11 @@
         "button_url": "",
         "button_style": "primary",
         "banner_title": "The Gift Guide",
-        "banner_content": "",
+        "banner_content": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.<\/p>",
         "banner_button": "choose gift",
         "banner_button_url": "#",
-        "banner_button_style": "primary",
-        "bottom_note": ""
+        "banner_button_style": "secondary",
+        "bottom_note": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL"
       }
     }
   },
