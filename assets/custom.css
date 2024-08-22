@@ -50,7 +50,9 @@ span.btn-icon {
 .btn.btn--primary:hover > span.btn-label{
     color: #fff;
 }
-
+.btn.btn--primary:hover span.btn-icon svg {
+    fill: #fff;
+}
 .btn {
     font-size: 16px;
     padding: 12px 20px 12px 40px;
