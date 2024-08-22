@@ -243,6 +243,17 @@ section h2 {
     position: relative;
 }
 
+.popup-trigger {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    cursor: pointer;
+}
+
+.popup-trigger > svg {
+    display: block;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
