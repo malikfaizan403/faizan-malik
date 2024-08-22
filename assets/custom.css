@@ -25,6 +25,7 @@ span.btn-icon {
     vertical-align: middle;
     position: relative;
     bottom: 2px;
+    margin-left: 10px;
 }
 
 .btn.btn--primary:before {
