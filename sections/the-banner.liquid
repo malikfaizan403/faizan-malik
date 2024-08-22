@@ -3,11 +3,11 @@
         <div class="page-width">
             <div class="top-bar-inner is-flex">
                 {% if section.settings.logo != blank %}
-                    <h1>{{ shop.name }}</h1>
-                {% else %}
                     <div class="shop-logo">
                         <img src="{{ section.settings.logo | img_url: '200x' }}" alt="{{ shop.name }}" />
                     </div>
+                {% else %}
+                    <h1>{{ shop.name }}</h1>
                 {% endif %}
                 {% if section.settings.text != blank %}
                     <div class="note">
