@@ -8,7 +8,7 @@
                 {% assign card_product = block.settings.product %}
                 <div class="grid__item">
                     <div class="product-image">
-                        <img src="{{ card_product.featured_image | img_url: '300x' }}" alt="{{ card_product.title }}">
+                        <img src="{{ card_product.featured_media | img_url: '300x' }}" alt="{{ card_product.title }}">
                     </div>
                 </div>
             {% endfor %}
