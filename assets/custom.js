@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                         // Prepare and send the request to add to cart
                         addToCart(selectedVariant.id)
                         .then((data)=>{
+                            console.log(data);
                             checkforGift(data);
                         })
                         .then(alert('Item added to cart.'));
