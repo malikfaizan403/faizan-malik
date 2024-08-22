@@ -177,7 +177,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     })
                     .then(response => response.json())
                     .then(data => {
-                        console.log(response);
+                        console.log(data);
                        alert('Item added to cart.');
                         // Handle success (e.g., show a message, update cart UI)
                     })
