@@ -160,6 +160,14 @@ span.btn-icon {
     margin-bottom: 50px;
 }
 
+.banner_content p{
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+
 .bottom_note p {
     margin: 0;
     font-family: Jost;
