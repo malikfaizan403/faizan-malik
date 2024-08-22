@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             trigger.addEventListener('click',(el)=>{
                 console.log(el);
                 let product = JSON.parse(trigger.querySelector('script').textContent);
-                console.log(product);
+                buildPopup(product);
             })
         })
     }
