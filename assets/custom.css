@@ -1,3 +1,10 @@
 body{
     font-family: 'Jost', sans-serif;
 }
+.is-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.is-align-middle{
+    align-items: center;
+}
