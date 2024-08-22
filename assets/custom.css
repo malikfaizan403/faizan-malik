@@ -199,3 +199,16 @@ section.the-banner .page-width {
 body:not(.is-loaded)>* {
     filter: blur(1px);
 }
+
+.top-bar-inner .note, .top-bar-inner .header-cta {
+    display: none;
+}
+
+.top-bar-inner {
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.shop-logo img {
+    height: 20px;
+}
