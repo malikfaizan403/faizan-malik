@@ -43,7 +43,7 @@ span.btn-icon {
 .btn.btn--primary:hover:before {
     width: 100%;
 }
-.btn.btn--primary:hover > span.btn-label{
+.btn.btn--primary > span.btn-label{
     transition-delay: .2s;
     transition: .4s all ease-in-out;
 }
