@@ -339,6 +339,11 @@ span.closepopup svg {
     margin-bottom: 12px;
 }
 
+.pdp-popup-wrapper:not(.is-ative) {
+    visibility: hidden;
+    pointer-events: none;
+}
+
 @media (max-width:490px){
 
     .top-bar-inner .note,
