@@ -11,3 +11,27 @@ body{
 .is-justify-space-between{
     justify-content: space-between;
 }
+
+span.btn-icon svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+span.btn-icon {
+    width: 30px;
+    display: inline-block;
+    height: 15px;
+    vertical-align: middle;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 11px 22px 11px 40px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.btn.btn--primary {
+    background: #FFF544;
+}
