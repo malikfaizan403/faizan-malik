@@ -63,11 +63,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function buildForm(product) {
 
-            const optionsContainer = document.getElementById('productOptions');
+        const optionsContainer = document.getElementById('productOptions');
 
             const optionValues = {};
             product.variants.forEach(variant => {
                 variant.options.forEach((value, index) => {
+                    console.log(value);
                     const optionName = `Option ${index + 1}`;
                     if (!optionValues[optionName]) {
                         optionValues[optionName] = new Set();
