@@ -31,6 +31,11 @@
 
     {% render 'meta-tags' %}
 
+    <script type="text/javascript">
+        var Shopify = Shopify || {};
+        Shopify.money_format = "{{ shop.money_format }}";
+    </script>
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
