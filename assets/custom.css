@@ -274,6 +274,7 @@ section h2 {
     background: #fff;
     max-width: 312px;
     padding: 36px 16px 25px;
+    transition: .3s all;
 }
 
 .pdp-popup-wrapper:not(.is-active) .pdp-popup {
