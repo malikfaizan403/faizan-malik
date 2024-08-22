@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             const label = document.createElement('label');
             label.textContent = option.name + ':';
             fieldContainer.appendChild(label);
-
+            console.log(fieldContainer);
             if (option.type === 'select') {
                 const select = document.createElement('select');
                 select.id = option.name.toLowerCase();
