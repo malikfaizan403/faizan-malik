@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
      // Function to add item to the cart
-     async function addToCart(variantId, quantity = 1, successMsg) {
+     async function addToCart(variantId, quantity = 1) {
         fetch('/cart/add.js', {
             method: 'POST',
             headers: {
@@ -209,7 +209,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
         .then(response => response.json())
         .then(data => {
-            checkforGift(data);
             // Handle success (e.g., show a message, update cart UI)
         })
         .catch(error => {
