@@ -111,3 +111,21 @@ span.btn-icon {
 .the-banner-wrapper {
     height: 100%;
 }
+
+.the-banner-text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 30px;
+    padding-left: 60px;
+}
+
+.the-banner-text h2 {
+    font-family: Jost;
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 70px;
+    text-align: left;
+    margin-top: 0;
+}
