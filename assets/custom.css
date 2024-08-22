@@ -263,7 +263,7 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(1px) saturate(0.5);
+    backdrop-filter: saturate(0.5);
     transition: .4s all;
     z-index: 4;
 }
