@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const values = Array.from(optionValues[optionName]);
 
                 if (values.length > 1) {
-                    if (optionName.includes('Option 1')) {
+                    if (optionName.includes('Size')) {
                         // Use a select dropdown for options like sizes
                         const select = document.createElement('select');
                         select.id = optionName.toLowerCase().replace(/\s+/g, '_');
