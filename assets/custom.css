@@ -472,6 +472,10 @@ span.closepopup svg {
         min-height: 200px;
     }
 
+    section.the-grid{
+        padding-top: 40px;
+    }
+
     @-moz-keyframes scroll-left {
         0% {
             -moz-transform: translateX(100%);
