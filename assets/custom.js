@@ -45,8 +45,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let popupContainer = section.querySelector(selectors.popupWrap);
         popupContainer.classList.add('is-active');
 
-        popupContainer.querySelector(selectors.title).innerText = product.title;
+        addProductData(popupContainer, product);
+    }
 
+    function addProductData(popup, product) {
+        popup.querySelector(selectors.title).innerText = product.title;
+        popup.querySelector(selectors.price).innerText = product.price;
+        popup.querySelector(selectors.desc).innerText = product.description;
     }
 
 });
