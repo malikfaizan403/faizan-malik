@@ -220,4 +220,7 @@ body:not(.is-loaded)>* {
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
