@@ -58,6 +58,10 @@ span.btn-icon {
     fill: #fff;
 }
 
+.btn.btn--secondary:hover span.btn-icon svg path{
+    fill: #000;
+}
+
 .btn {
     font-size: 16px;
     padding: 12px 20px 12px 40px;
