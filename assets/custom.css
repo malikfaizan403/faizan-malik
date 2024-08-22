@@ -59,8 +59,8 @@ span.btn-icon {
     color: #000;
 }
 
-.btn.btn--primary span.btn-icon svg path,
-.btn.btn--primary > span.btn-label,
+.btn span.btn-icon svg path,
+.btn > span.btn-label,
 .btn.btn--primary:before,
 .btn.btn--secondary:before {
     transition: .4s all ease-in-out;
