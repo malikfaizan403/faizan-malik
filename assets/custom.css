@@ -40,7 +40,7 @@ span.btn-icon {
     z-index: 1;
 }
 
-.btn.btn.btn--primary:before {
+.btn.btn.btn--secondary:before {
     background-color: #fff544;
 }
 
