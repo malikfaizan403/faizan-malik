@@ -59,6 +59,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
         popup.querySelector(selectors.image).src = product.featured_image;
     }
 
+    // Populate size and color options
+    const sizeSelect = document.getElementById('size');
+    const colorSelect = document.getElementById('color');
+
+    const sizes = [...new Set(product.variants.map(v => v.option1))];
+    const colors = [...new Set(product.variants.map(v => v.option2))];
+
+    sizes.forEach(size => {
+        const option = document.createElement('option');
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+    });
+
+    colors.forEach(color => {
+        const option = document.createElement('option');
+        option.value = color;
+        option.textContent = color;
+        colorSelect.appendChild(option);
+    });
+
     // reset popup on close
     function resetPopup(popup){
 
