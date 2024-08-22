@@ -207,12 +207,13 @@ body:not(.is-loaded)>* {
     top: 50%;
     transform: translateY(-50%);
     left: 16px;
+}
+.menu_btn button{
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
 }
-
 @media (max-width:490px){
 
     .top-bar-inner .note,
