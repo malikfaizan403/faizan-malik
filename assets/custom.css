@@ -42,10 +42,12 @@ span.btn-icon {
 .btn.btn--primary:hover:before {
     width: 100%;
 }
-
-.btn.btn--primary:hover > span{
+.btn.btn--primary:hover > span.btn-label{
+    transition-delay: .2s all;
+    transition: .2s all ease-in-out;
+}
+.btn.btn--primary:hover > span.btn-label{
     color: #fff;
-    transition: .4s all ease-in-out;
 }
 
 .btn {
