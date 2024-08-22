@@ -72,13 +72,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             fieldContainer.classList.add('option-field');
 
             const label = document.createElement('label');
-            label.textContent = option.name + ':';
+            label.textContent = option + ':';
             fieldContainer.appendChild(label);
             console.log(fieldContainer);
             if (option.type === 'select') {
                 const select = document.createElement('select');
-                select.id = option.name.toLowerCase();
-                select.name = option.name.toLowerCase();
+                select.id = option.toLowerCase();
+                select.name = option.toLowerCase();
 
                 option.values.forEach(value => {
                     const optionElement = document.createElement('option');
