@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                             select.appendChild(optionElement);
                         });
                         fieldContainer.appendChild(select);
+                        fieldContainer.classList.add(optionName.toLowerCase().replace(/\s+/g, '_'));
                     } else {
                         // Use radio buttons for other options like colors
                         values.forEach(value => {
