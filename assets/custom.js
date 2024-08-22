@@ -79,6 +79,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 });
             });
 
+            console.log(optionValues);
+
             // Create option fields
             Object.keys(optionValues).forEach(optionName => {
                 const fieldContainer = document.createElement('div');
@@ -91,7 +93,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 const values = Array.from(optionValues[optionName]);
 
                 if (values.length > 1) {
-                    if (optionName.includes('size')) {
+                    if (optionName.includes('Option 1')) {
                         // Use a select dropdown for options like sizes
                         const select = document.createElement('select');
                         select.id = optionName.toLowerCase().replace(/\s+/g, '_');
