@@ -163,31 +163,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     }
                 });
 
-                // Function to add item to the cart
-                function addToCart(variantId, quantity = 1) {
-                    fetch('/cart/add.js', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            id: variantId,
-                            quantity: quantity
-                        })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        checkforGift(data);
-                        alert('Item added to cart.');
-                        // Handle success (e.g., show a message, update cart UI)
-                    })
-                    .catch(error => {
-                        alert('Something Went Wrong!');
-                        // Handle error
-                    });
-                }
-
     }
 
     function checkforGift(data) {
@@ -219,6 +194,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
     }
 
+     // Function to add item to the cart
+     function addToCart(variantId, quantity = 1) {
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                id: variantId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            checkforGift(data);
+            alert('Item added to cart.');
+            // Handle success (e.g., show a message, update cart UI)
+        })
+        .catch(error => {
+            alert('Something Went Wrong!');
+            // Handle error
+        });
+    }
 
     // reset popup on close
     function resetPopup(popup){
