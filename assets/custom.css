@@ -17,6 +17,7 @@ span.btn-icon svg {
     display: block;
     height: 100%;
     width: 100%;
+    transition: .4s all;
 }
 
 span.btn-icon {
