@@ -371,6 +371,7 @@ form#addToCartForm button {
     line-height: 20.48px;
     text-align: center;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .option-field > div {
