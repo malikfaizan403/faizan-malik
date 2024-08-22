@@ -57,12 +57,118 @@ document.addEventListener("DOMContentLoaded", (event) => {
         popup.querySelector(selectors.price).innerText = Shopify.formatMoney(product.price);
         popup.querySelector(selectors.desc).innerHTML = product.description;
         popup.querySelector(selectors.image).src = product.featured_image;
+
+        buildForm();
     }
 
+    function buildForm(product) {
+        const optionsContainer = document.getElementById('productOptions');
+
+        // Create option fields
+        product.options.forEach(option => {
+            const fieldContainer = document.createElement('div');
+            fieldContainer.classList.add('option-field');
+
+            const label = document.createElement('label');
+            label.textContent = option.name + ':';
+            fieldContainer.appendChild(label);
+
+            if (option.type === 'select') {
+                const select = document.createElement('select');
+                select.id = option.name.toLowerCase();
+                select.name = option.name.toLowerCase();
+
+                option.values.forEach(value => {
+                    const optionElement = document.createElement('option');
+                    optionElement.value = value;
+                    optionElement.textContent = value;
+                    select.appendChild(optionElement);
+                });
+                fieldContainer.appendChild(select);
+            } else if (option.type === 'radio') {
+                option.values.forEach(value => {
+                    const radioContainer = document.createElement('div');
+                    const radio = document.createElement('input');
+                    radio.type = 'radio';
+                    radio.id = `${option.name.toLowerCase()}_${value}`;
+                    radio.name = option.name.toLowerCase();
+                    radio.value = value;
+
+                    const radioLabel = document.createElement('label');
+                    radioLabel.setAttribute('for', radio.id);
+                    radioLabel.textContent = value;
+
+                    radioContainer.appendChild(radio);
+                    radioContainer.appendChild(radioLabel);
+                    fieldContainer.appendChild(radioContainer);
+                });
+            }
+
+            optionsContainer.appendChild(fieldContainer);
+        });
+
+        // Handle form submission
+        document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const selectedOptions = {};
+            product.options.forEach(option => {
+                if (option.type === 'select') {
+                    selectedOptions[option.name.toLowerCase()] = document.getElementById(option.name.toLowerCase()).value;
+                } else if (option.type === 'radio') {
+                    const selectedRadio = document.querySelector(`input[name="${option.name.toLowerCase()}"]:checked`);
+                    selectedOptions[option.name.toLowerCase()] = selectedRadio ? selectedRadio.value : null;
+                }
+            });
+
+            // Find the variant ID based on selected options
+            const selectedVariant = product.variants.find(variant =>
+                product.options.every(option =>
+                    variant[option.name.toLowerCase()] === selectedOptions[option.name.toLowerCase()]
+                )
+            );
+
+            if (selectedVariant) {
+                document.getElementById('variantId').value = selectedVariant.id;
+
+                // Prepare and send the request to add to cart
+                addToCart(selectedVariant.id);
+            } else {
+                alert('Please select a valid option.');
+            }
+        });
+
+
+        });
+    }
 
     // reset popup on close
     function resetPopup(popup){
 
+    }
+
+    // Function to add item to the cart
+    function addToCart(variantId, quantity = 1) {
+        fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                id: variantId,
+                quantity: quantity
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Item added to cart:', data);
+            // Handle success (e.g., show a message, update cart UI)
+        })
+        .catch(error => {
+            console.error('Error adding item to cart:', error);
+            // Handle error
+        });
     }
 
 });
