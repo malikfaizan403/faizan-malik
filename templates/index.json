@@ -32,37 +32,49 @@
         "product_card_Ktr7gc": {
           "type": "product_card",
           "settings": {
-            "card_product": "black-leather-bag"
+            "card_product": "black-leather-bag",
+            "leftRight": 48,
+            "topBottom": 64
           }
         },
         "product_card_ARxFbq": {
           "type": "product_card",
           "settings": {
-            "card_product": "blue-silk-tuxedo"
+            "card_product": "blue-silk-tuxedo",
+            "leftRight": 40,
+            "topBottom": 40
           }
         },
         "product_card_VtLNWB": {
           "type": "product_card",
           "settings": {
-            "card_product": "chequered-red-shirt"
+            "card_product": "chequered-red-shirt",
+            "leftRight": 40,
+            "topBottom": 40
           }
         },
         "product_card_Ccert4": {
           "type": "product_card",
           "settings": {
-            "card_product": "classic-varsity-top"
+            "card_product": "classic-varsity-top",
+            "leftRight": 40,
+            "topBottom": 40
           }
         },
         "product_card_VK7qaQ": {
           "type": "product_card",
           "settings": {
-            "card_product": "dark-denim-top"
+            "card_product": "dark-denim-top",
+            "leftRight": 40,
+            "topBottom": 40
           }
         },
         "product_card_ea3QNk": {
           "type": "product_card",
           "settings": {
-            "card_product": "led-high-tops"
+            "card_product": "led-high-tops",
+            "leftRight": 40,
+            "topBottom": 40
           }
         }
       },
