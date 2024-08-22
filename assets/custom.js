@@ -196,9 +196,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
         }
     }
 
-    function addFreeGiftifNotAddedYet(variantID){
+    function addFreeGiftifNotAddedYet(variantID) {
+        // Fetch the current cart
+        fetch('/cart.js')
+            .then(response => response.json())
+            .then(cart => {
+                // Check if the variantID is already in the cart
+                const isAlreadyInCart = cart.items.some(item => item.variant_id === variantID);
 
+                if (!isAlreadyInCart) {
+                    // Add the free gift to the cart
+                    fetch('/cart/add.js', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            items: [{ id: variantID, quantity: 1 }],
+                        }),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Free gift added:', data);
+                        // Optionally, you can trigger a cart update or notify the user
+                    })
+                    .catch(error => {
+                        console.error('Error adding free gift:', error);
+                    });
+                } else {
+                    console.log('Free gift is already in the cart.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching cart:', error);
+            });
     }
+
 
     // reset popup on close
     function resetPopup(popup){
