@@ -133,36 +133,36 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
 
         // Handle form submission
-        // document.getElementById('addToCartForm').addEventListener('submit', function(event) {
-        //     event.preventDefault();
+        document.getElementById('addToCartForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-        //     const selectedOptions = {};
-        //     product.options.forEach(option => {
-        //         if (option.type === 'select') {
-        //             selectedOptions[option.name.toLowerCase()] = document.getElementById(option.name.toLowerCase()).value;
-        //         } else if (option.type === 'radio') {
-        //             const selectedRadio = document.querySelector(`input[name="${option.name.toLowerCase()}"]:checked`);
-        //             selectedOptions[option.name.toLowerCase()] = selectedRadio ? selectedRadio.value : null;
-        //         }
-        //     });
+            const selectedOptions = {};
+            product.options.forEach(option => {
+                if (option.type === 'select') {
+                    selectedOptions[option.name.toLowerCase()] = document.getElementById(option.name.toLowerCase()).value;
+                } else if (option.type === 'radio') {
+                    const selectedRadio = document.querySelector(`input[name="${option.name.toLowerCase()}"]:checked`);
+                    selectedOptions[option.name.toLowerCase()] = selectedRadio ? selectedRadio.value : null;
+                }
+            });
 
-        //     // Find the variant ID based on selected options
-        //     const selectedVariant = product.variants.find(variant =>
-        //         product.options.every(option =>
-        //             variant[option.name.toLowerCase()] === selectedOptions[option.name.toLowerCase()]
-        //         )
-        //     );
+            // Find the variant ID based on selected options
+            const selectedVariant = product.variants.find(variant =>
+                product.options.every(option =>
+                    variant[option.name.toLowerCase()] === selectedOptions[option.name.toLowerCase()]
+                )
+            );
 
-        //     if (selectedVariant) {
-        //         document.getElementById('variantId').value = selectedVariant.id;
+            if (selectedVariant) {
+                document.getElementById('variantId').value = selectedVariant.id;
 
-        //         // Prepare and send the request to add to cart
-        //         addToCart(selectedVariant.id);
-        //     } else {
-        //         alert('Please select a valid option.');
-        //     }
+                // Prepare and send the request to add to cart
+                addToCart(selectedVariant.id);
+            } else {
+                alert('Please select a valid option.');
+            }
 
-        // });
+        });
 
     }
 
