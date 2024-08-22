@@ -22,8 +22,9 @@ span.btn-icon svg {
 span.btn-icon {
     width: 24px;
     display: inline-block;
-    height: 14px;
     vertical-align: middle;
+    position: relative;
+    bottom: 2px;
 }
 
 .btn {
