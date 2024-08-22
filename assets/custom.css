@@ -49,8 +49,11 @@ span.btn-icon {
     text-transform: uppercase;
     line-height: 20px;
     text-decoration: none;
+    position: relative;
 }
-
+.btn > span{
+    z-index: 2;
+}
 .btn.btn--primary {
     background: #FFF544;
 }
