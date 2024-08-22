@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function buildPopup(trigger, product){
         let section = trigger.closest('.the-grid');
-        let popupContainer = section.querySelector('.pdp-popup');
+        let popupContainer = section.querySelector('.pdp-popup-wrapper');
     }
 
 });
