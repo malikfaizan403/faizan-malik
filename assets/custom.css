@@ -27,6 +27,22 @@ span.btn-icon {
     bottom: 2px;
 }
 
+.btn.btn--primary:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    transition: .4s all ease-in-out;
+    z-index: 1;
+}
+
+.btn.btn--primary:hover:before {
+    width: 100%;
+}
+
 .btn {
     font-size: 16px;
     padding: 12px 20px 12px 40px;
