@@ -96,3 +96,8 @@ span.btn-icon {
 .top-bar-inner {
     padding: 10px 0;
 }
+
+.the-banner-wrapper img {
+    width: 100%;
+    object-fit: cover;
+}
