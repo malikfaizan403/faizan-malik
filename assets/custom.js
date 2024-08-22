@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function checkforGift(data) {
-        if(data.variant_options.includes('Black') && data.variant_options.includes('Medium')){
+        if(data.variant_options.includes('Black') && data.variant_options.includes('M')){
             addFreeGiftifNotAddedYet(freeGift);
         }
     }
