@@ -29,7 +29,7 @@ span.btn-icon {
 }
 
 .btn.btn--primary:before,
-.btn.btn-secondary:before {
+.btn.btn--secondary:before {
     content: "";
     position: absolute;
     top: 0;
@@ -40,7 +40,7 @@ span.btn-icon {
     z-index: 1;
 }
 
-.btn.btn-secondary:before {
+.btn.btn--secondary:before {
     background-color: #fff544;
 }
 
