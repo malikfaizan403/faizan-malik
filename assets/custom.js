@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     function buildForm(product) {
+
         const optionsContainer = document.getElementById('productOptions');
 
         // Create option fields
@@ -136,10 +137,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
             } else {
                 alert('Please select a valid option.');
             }
-        });
-
 
         });
+
     }
 
     // reset popup on close
