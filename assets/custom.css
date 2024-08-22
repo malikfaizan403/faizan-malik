@@ -38,6 +38,10 @@ span.btn-icon {
     z-index: 1;
 }
 
+.btn.btn-secondary:before {
+    background-color: #fff544;
+}
+
 .btn.btn--primary:hover:before {
     width: 100%;
 }
@@ -46,6 +50,10 @@ span.btn-icon {
 }
 .btn.btn--primary:hover > span.btn-label{
     color: #fff;
+}
+
+.btn.btn--secondary:hover > span.btn-label{
+    color: #000;
 }
 
 .btn.btn--primary span.btn-icon svg path,
