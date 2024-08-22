@@ -275,12 +275,15 @@ section h2 {
     max-width: 312px;
     padding: 36px 16px 25px;
     transition: .3s all;
-}
-
-.pdp-popup-wrapper:not(.is-active) .pdp-popup {
     transform: translateY(20px);
     visibility: hidden;
     pointer-events: none;
+}
+
+.pdp-popup-wrapper.is-active .pdp-popup {
+    transform: none;
+    visibility: visible;
+    pointer-events: all;
 }
 
 .is-align-end {
