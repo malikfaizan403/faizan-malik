@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     function buildForm(product) {
 
-        const optionsContainer = document.getElementById('productOptions');
+            const optionsContainer = document.getElementById('productOptions');
+            optionsContainer.innerHTML = '';
 
             const optionValues = {};
             product.variants.forEach(variant => {
