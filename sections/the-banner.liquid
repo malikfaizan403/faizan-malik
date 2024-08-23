@@ -1,0 +1,192 @@
+<section class="the-banner">
+    <div class="top-bar">
+        <div class="page-width">
+            <div class="top-bar-inner is-flex is-align-middle is-justify-space-between">
+
+                <div class="menu_btn">
+                    <button type="button" id="menubtn">
+                        <svg width="20" height="13" viewBox="0 0 20 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 1.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 11.5H19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+
+                {% if section.settings.logo != blank %}
+                    <div class="shop-logo">
+                        <img src="{{ section.settings.logo | img_url: '200x' }}" alt="{{ shop.name }}" />
+                    </div>
+                {% else %}
+                    <h1>{{ shop.name }}</h1>
+                {% endif %}
+                {% if section.settings.text != blank %}
+                    <div class="note">
+                        <p>{{ section.settings.text }}</p>
+                    </div>
+                {% endif %}
+                {% if section.settings.button != blank %}
+                    <div class="header-cta">
+                        <a href="{{ section.settings.button_url }}" class="btn btn--{{ section.settings.button_style }}"><span class="btn-label">{{ section.settings.button }}</span> <span class="btn-icon"><svg width="69" height="30" viewBox="0 0 69 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.75879 13.1458L0.758789 13.1458L0.758789 17.1458L2.75879 17.1458L2.75879 13.1458ZM68.173 16.56C68.9541 15.779 68.9541 14.5127 68.173 13.7316L55.4451 1.00368C54.664 0.222633 53.3977 0.222633 52.6167 1.00368C51.8356 1.78473 51.8356 3.05106 52.6167 3.83211L63.9304 15.1458L52.6167 26.4595C51.8356 27.2406 51.8356 28.5069 52.6167 29.288C53.3977 30.069 54.664 30.069 55.4451 29.288L68.173 16.56ZM2.75879 17.1458L66.7588 17.1458L66.7588 13.1458L2.75879 13.1458L2.75879 17.1458Z" fill="black"/> </svg></span></a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="the-banner-content">
+        <div class="the-banner-wrapper">
+            {% if section.settings.banner_image == blank %}
+                <img src="https://cdn.shopify.com/s/files/1/0661/1913/9380/files/banner.jpg?v=1724344864" alt="Banner Image" />
+            {% else %}
+                <img src="{{ section.settings.banner_image | img_url:'master' }}" alt="Banner Image" />
+            {% endif %}
+        </div>
+        {% if section.settings.banner_title != blank or section.settings.banner_content != blank or section.settings.banner_button != blank %}
+            <div class="the-banner-text">
+                {% if section.settings.banner_title != blank %}
+                    <h2>{{ section.settings.banner_title }}</h2>
+                {% endif %}
+                {% if section.settings.banner_content != blank %}
+                    <div class="banner_content">
+                        {{ section.settings.banner_content }}
+                    </div>
+                {% endif %}
+                {% if section.settings.banner_button != blank %}
+                    <div class="banner-cta">
+                        <a href="{{ section.settings.banner_button_url }}" class="btn btn--{{ section.settings.banner_button_style }}"><span class="btn-label">{{ section.settings.banner_button }}</span> <span class="btn-icon"><svg width="69" height="30" viewBox="0 0 69 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M2.75879 13.1458L0.758789 13.1458L0.758789 17.1458L2.75879 17.1458L2.75879 13.1458ZM68.173 16.56C68.9541 15.779 68.9541 14.5127 68.173 13.7316L55.4451 1.00368C54.664 0.222633 53.3977 0.222633 52.6167 1.00368C51.8356 1.78473 51.8356 3.05106 52.6167 3.83211L63.9304 15.1458L52.6167 26.4595C51.8356 27.2406 51.8356 28.5069 52.6167 29.288C53.3977 30.069 54.664 30.069 55.4451 29.288L68.173 16.56ZM2.75879 17.1458L66.7588 17.1458L66.7588 13.1458L2.75879 13.1458L2.75879 17.1458Z" fill="black"/> </svg></span></a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+    {% if section.settings.bottom_note != blank %}
+        <div class="bottom_note">
+            <p>{{ section.settings.bottom_note }}</p>
+        </div>
+    {% endif %}
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "The Banner",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Topbar"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Announcement Text",
+                "default": "Some text here"
+            },
+            {
+                "type": "header",
+                "content": "Button"
+            },
+            {
+                "type": "text",
+                "id": "button",
+                "label": "Button label",
+                "default": "Click Here"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
+            },
+            {
+                "type": "select",
+                "id": "button_style",
+                "label": "Button Style",
+                "options": [
+                    {
+                        "label": "Primary Button",
+                        "value": "primary"
+                    },
+                    {
+                        "label": "Secondary Button",
+                        "value": "secondary"
+                    }
+                ],
+                "default": "primary"
+            },
+            {
+                "type": "header",
+                "content": "Banner"
+            },
+            {
+                "type": "image_picker",
+                "id": "banner_image",
+                "label": "Banner Image"
+            },
+            {
+                "type": "header",
+                "content": "Banner Content"
+            },
+            {
+                "type": "text",
+                "id": "banner_title",
+                "label": "Banner Title",
+                "default": "Banner Heading"
+            },
+            {
+                "type": "richtext",
+                "id": "banner_content",
+                "label": "Button URL"
+            },
+            {
+                "type": "header",
+                "content": "Banner Button"
+            },
+            {
+                "type": "text",
+                "id": "banner_button",
+                "label": "Button label",
+                "default": "Click Here"
+            },
+            {
+                "type": "url",
+                "id": "banner_button_url",
+                "label": "Button URL"
+            },
+            {
+                "type": "select",
+                "id": "banner_button_style",
+                "label": "Button Style",
+                "options": [
+                    {
+                        "label": "Primary Button",
+                        "value": "primary"
+                    },
+                    {
+                        "label": "Secondary Button",
+                        "value": "secondary"
+                    }
+                ],
+                "default": "primary"
+            },
+            {
+                "type": "header",
+                "content": "Addional Settings"
+            },
+            {
+                "type": "text",
+                "id": "bottom_note",
+                "label": "Bottom Note"
+            }
+        ],
+        "presets": [
+            {
+                "name": "The Banner"
+            }
+        ]
+    }
+{% endschema %}

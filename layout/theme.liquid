@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -27,6 +30,11 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+
+    <script type="text/javascript">
+        var Shopify = Shopify || {};
+        Shopify.money_format = "{{ shop.money_format }}";
+    </script>
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
@@ -296,6 +304,9 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
+
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -372,5 +383,8 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
   </body>
 </html>
